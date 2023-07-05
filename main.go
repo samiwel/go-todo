@@ -101,11 +101,7 @@ func main() {
 			os.Exit(0)
 		}
 
-		
-
+	
 	}
-
-
-	// todoList.addTodoItem(TodoItem{Name: "Buy some milk", Description: "Go to the grocery store to buy some milk", Done: false})
 
 }
