@@ -35,7 +35,7 @@ func markAsComplete() {
 		return
 	}
 
-	todoList.Items[index - 1].Complete()
+	todoList.Items[index-1].Complete()
 }
 
 func printMenu() {
@@ -83,7 +83,7 @@ func main() {
 			fmt.Printf("%v - %v %v\n", i+1, todoList.Items[i].Name, todoStatus(todoList.Items[i].Done))
 		}
 
-		fmt.Printf("\n");
+		fmt.Printf("\n")
 		printMenu()
 		option, _ := promptMenuOption(reader, "Select an option", 1, 4)
 
@@ -98,10 +98,9 @@ func main() {
 			deleteTodoItem()
 			continue
 		case 4:
-			os.Exit(0)
+			running = false
 		}
 
-	
 	}
 
 }
