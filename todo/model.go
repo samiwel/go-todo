@@ -1,9 +1,9 @@
 package todo
 
 type TodoItem struct {
-	Name string;
-	Description string;
-	Done bool;
+	Name        string
+	Description string
+	Done        bool
 }
 
 func (todoItem *TodoItem) Complete() {
@@ -11,7 +11,7 @@ func (todoItem *TodoItem) Complete() {
 }
 
 type TodoList struct {
-	Items []TodoItem;
+	Items []TodoItem
 }
 
 func (tl *TodoList) Add(item TodoItem) {
@@ -21,9 +21,9 @@ func (tl *TodoList) Add(item TodoItem) {
 func (tl *TodoList) Remove(item int) {
 	index := item - 1
 	ret := make([]TodoItem, 0)
-    ret = append(ret, tl.Items[:index]...)
+	ret = append(ret, tl.Items[:index]...)
 	if index > 0 {
-    	ret = append(ret, tl.Items[index - 1:]...)
+		ret = append(ret, tl.Items[index-1:]...)
 	}
 	tl.Items = ret
 }
